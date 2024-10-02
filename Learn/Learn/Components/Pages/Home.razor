@@ -1,0 +1,32 @@
+﻿@page "/"
+@rendermode InteractiveAuto
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+@* @if(counterValue < 5)
+{
+    <Counter1 OnCounterChange="UpdateCounter" />
+} *@
+
+
+ <Counter1 OnCounterChange="UpdateCounter" />
+
+<h3>current count is @counterValue</h3>
+
+
+@*<BetterCounter Title="Counter 1" StartingValue="1"/>
+ <BetterCounter Title="Counter 10" StartingValue="10"/>
+<BetterCounter Title="Counter 100" StartingValue="100"/>
+<BetterCounter Title="Counter 1000" StartingValue="1000"/>
+<BetterCounter Title="Counter 1000000" StartingValue="1000000" /> *@
+
+
+@code{
+    private int counterValue;
+
+    public void UpdateCounter(int val)
+    {
+        counterValue = val;
+    }
+}
